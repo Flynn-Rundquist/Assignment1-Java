@@ -1,4 +1,4 @@
-/*
+/**
  * This program plays rock, paper, scissors 
  * against the user.
  *
@@ -10,19 +10,28 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class ScissorsPaperRock {
+public final class ScissorsPaperRock {
+    private ScissorsPaperRock() {
+        // private constructor to prevent instantiation
+    }
+
+    /**
+     * Main method to run the game.
+     *
+     * @param args Command line arguments (not used)
+     */
     public static void main(String[] args) {
-        // Array w/ options of rock, paper, or scissors
-        String[] options = {"Rock", "Paper", "Scissors"};
+        // Array with options of rock, paper, or scissors
+        final String[] options = {"Rock", "Paper", "Scissors"};
 
         // Gets user input
-        Scanner scanner = new Scanner(System.in); // Creates scanner object
+        final Scanner scanner = new Scanner(System.in); // Creates scanner object
         System.out.println("Choose rock, paper, or scissors (1-3):");
-        int userChoice = scanner.nextInt() - 1; // Subtract 1 because arrays start at 0
+        final int userChoice = scanner.nextInt() - 1; // Subtract 1 because arrays start at 0
 
         // Gets computer's selection
-        Random random = new Random();
-        int computerChoice = random.nextInt(options.length);
+        final Random random = new Random();
+        final int computerChoice = random.nextInt(options.length);
 
         if (userChoice >= 0 && userChoice < options.length) {
             System.out.println("You selected: " + options[userChoice]);
