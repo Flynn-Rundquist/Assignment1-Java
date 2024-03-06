@@ -1,27 +1,30 @@
-/*
- * This program plays rock, paper, scissors
- * against the user.
+/**
+ * This program plays rock, paper, scissors against the user.
  *
  * @author Flynn Rundquist
  * @version 1.0
  * @since 2024-03-06
  */
-
 import java.util.Random;
 import java.util.Scanner;
 
-/*
- * main method to run the game
- *
- * @param args Command line arguements (not used)
+/**
+ * Utility class for playing the game Scissors Paper Rock.
  */
-class ScissorsPaperRock {
-    static void main(String[] args) {
-        /*
-        *main method to run game
-        *
-        @param args Command line arguements (not used)
-        */
+final class ScissorsPaperRock {
+    /**
+     * Private constructor to prevent instantiation of this utility class.
+     */
+    private ScissorsPaperRock() {
+        // Private constructor to prevent instantiation
+    }
+
+    /**
+     * Main method to run the game.
+     *
+     * @param args Command line arguments (not used).
+     */
+    public static void main(String[] args) {
         final String[] options = {"Rock", "Paper", "Scissors"};
 
         final Scanner scanner = new Scanner(System.in);
