@@ -37,5 +37,8 @@ public class ScissorsPaperRock {
             (userChoiceIndex == 2 && computerChoiceIndex == 1)
         ) {
             System.out.println("You win!");
+        } else {
+                System.out.println("You lose!");
+        }
     } else {
         System.out.println("Invalid input. Input a number between 1 and 3.")
