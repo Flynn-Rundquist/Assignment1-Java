@@ -1,4 +1,4 @@
-/**
+/*
  * This program plays rock, paper, scissors against the user.
  *
  * @author Flynn Rundquist
