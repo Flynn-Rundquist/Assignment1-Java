@@ -32,6 +32,10 @@ public class ScissorsPaperRock {
         if (userChoice === computerChoice) {
                 System.out.println("Draw!");
         } else if (
-                        (
+                        (userChoiceIndex == 0 && computerChoiceIndex == 2) ||
+            (userChoiceIndex == 1 && computerChoiceIndex == 0) ||
+            (userChoiceIndex == 2 && computerChoiceIndex == 1)
+        ) {
+            System.out.println("You win!");
     } else {
         System.out.println("Invalid input. Input a number between 1 and 3.")
