@@ -7,8 +7,8 @@
  * @since 2024-03-06
  */
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class ScissorsPaperRock {
     public static void main(String[] args) {
@@ -17,18 +17,16 @@ public class ScissorsPaperRock {
 
         // Gets user input
         Scanner scanner = new Scanner(System.in); // Creates scanner object
-        System.out.println("Choose rock (1), paper (2), or scissors (3): ");
+        System.out.println("Choose rock, paper, or scissors (1-3):");
         int userChoice = scanner.nextInt() - 1; // Subtract 1 because arrays start at 0
-        System.out.println("You selected: " + options[userChoice]);
 
         // Gets computer's selection
         Random random = new Random();
         int computerChoice = random.nextInt(options.length);
 
-        // Print computer's choiec
-        System.out.println("Computer selected: " + options[computerChoice]);
-
         if (userChoice >= 0 && userChoice < options.length) {
+            System.out.println("You selected: " + options[userChoice]);
+            System.out.println("Computer selected: " + options[computerChoice]);
             if (userChoice == computerChoice) {
                 System.out.println("Draw!");
             } else if (
