@@ -1,4 +1,4 @@
-/**
+/*
  * This program plays rock, paper, scissors 
  * against the user.
  *
@@ -11,14 +11,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ScissorsPaperRock {
-
-    /**
-     * Main method to run the game.
-     *
-     * @param args Command line arguments (not used)
-     */
     public static void main(String[] args) {
-        // Array with options of rock, paper, or scissors
+        // Array w/ options of rock, paper, or scissors
         String[] options = {"Rock", "Paper", "Scissors"};
 
         // Gets user input
@@ -37,8 +31,8 @@ public class ScissorsPaperRock {
                 System.out.println("Draw!");
             } else if (
                     (userChoice == 0 && computerChoice == 2) ||
-                            (userChoice == 1 && computerChoice == 0) ||
-                            (userChoice == 2 && computerChoice == 1)
+                    (userChoice == 1 && computerChoice == 0) ||
+                    (userChoice == 2 && computerChoice == 1)
             ) {
                 System.out.println("You win!");
             } else {
