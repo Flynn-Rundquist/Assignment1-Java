@@ -10,10 +10,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public final class ScissorsPaperRock {
-    private ScissorsPaperRock() {
-        // private constructor to prevent instantiation
-    }
+public class ScissorsPaperRock {
 
     /**
      * Main method to run the game.
@@ -22,16 +19,16 @@ public final class ScissorsPaperRock {
      */
     public static void main(String[] args) {
         // Array with options of rock, paper, or scissors
-        final String[] options = {"Rock", "Paper", "Scissors"};
+        String[] options = {"Rock", "Paper", "Scissors"};
 
         // Gets user input
-        final Scanner scanner = new Scanner(System.in); // Creates scanner object
+        Scanner scanner = new Scanner(System.in); // Creates scanner object
         System.out.println("Choose rock, paper, or scissors (1-3):");
-        final int userChoice = scanner.nextInt() - 1; // Subtract 1 because arrays start at 0
+        int userChoice = scanner.nextInt() - 1; // Subtract 1 because arrays start at 0
 
         // Gets computer's selection
-        final Random random = new Random();
-        final int computerChoice = random.nextInt(options.length);
+        Random random = new Random();
+        int computerChoice = random.nextInt(options.length);
 
         if (userChoice >= 0 && userChoice < options.length) {
             System.out.println("You selected: " + options[userChoice]);
@@ -40,8 +37,8 @@ public final class ScissorsPaperRock {
                 System.out.println("Draw!");
             } else if (
                     (userChoice == 0 && computerChoice == 2) ||
-                    (userChoice == 1 && computerChoice == 0) ||
-                    (userChoice == 2 && computerChoice == 1)
+                            (userChoice == 1 && computerChoice == 0) ||
+                            (userChoice == 2 && computerChoice == 1)
             ) {
                 System.out.println("You win!");
             } else {
